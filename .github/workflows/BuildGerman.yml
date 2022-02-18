@@ -7,9 +7,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Change language
-        script:
-        - rm language.tex
-        - cp german.tex language.tex    
+        run: rm language.tex && cp german.tex language.tex    
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
